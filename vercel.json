@@ -1,0 +1,19 @@
+{
+  "functions": {
+    "app/page.tsx": {
+      "maxDuration": 10
+    }
+  },
+  "regions": ["cle1"],
+  "framework": "nextjs",
+  "buildCommand": "next build",
+  "outputDirectory": ".next",
+  "installCommand": "npm install",
+  "devCommand": "next dev",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/$1"
+    }
+  ]
+}

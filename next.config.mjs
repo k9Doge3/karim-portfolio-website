@@ -41,6 +41,56 @@ const nextConfig = {
       },
     ]
   },
+  async redirects() {
+    return [
+      // Domain-based redirects for your three domains
+      {
+        source: '/',
+        has: [
+          {
+            type: 'host',
+            value: 'kylife.ca',
+          },
+        ],
+        destination: '/personal',
+        permanent: false,
+      },
+      {
+        source: '/',
+        has: [
+          {
+            type: 'host',
+            value: 'www.kylife.ca',
+          },
+        ],
+        destination: '/personal',
+        permanent: false,
+      },
+      {
+        source: '/',
+        has: [
+          {
+            type: 'host',
+            value: 'wildrosepainters.ca',
+          },
+        ],
+        destination: '/wildrose-painters',
+        permanent: false,
+      },
+      {
+        source: '/',
+        has: [
+          {
+            type: 'host',
+            value: 'www.wildrosepainters.ca',
+          },
+        ],
+        destination: '/wildrose-painters',
+        permanent: false,
+      },
+      // kygroup.ca stays on the main page (/) - no redirect needed
+    ]
+  },
   experimental: {
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
     turbo: {
