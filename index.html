@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karim Youssef | Creative Digital Universe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-content">
+            <div class="logo-section">
+                <div class="logo-container">
+                    <div class="ky-logo">
+                        <span class="logo-k">K</span>
+                        <span class="logo-y">Y</span>
+                    </div>
+                    <span class="brand-text">KYGROUP.CA</span>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#business" class="nav-link">Business</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="greeting">Hello, I'm</div>
+                <h1 class="hero-name">
+                    <span class="name-karim">Karim</span>
+                    <span class="name-youssef">Youssef</span>
+                </h1>
+                <div class="hero-tagline">
+                    <span class="tagline-text">Creative Developer</span>
+                    <span class="separator">•</span>
+                    <span class="tagline-text">Business Owner</span>
+                    <span class="separator">•</span>
+                    <span class="tagline-text">Digital Innovator</span>
+                </div>
+                <p class="hero-description">
+                    Crafting digital experiences that bridge creativity and technology. 
+                    From painting walls to building web applications, I bring visions to life.
+                </p>
+                <div class="hero-actions">
+                    <button class="cta-primary" onclick="exploreWork()">
+                        <span>Explore My Work</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                    <button class="cta-secondary" onclick="getInTouch()">
+                        <span>Get In Touch</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="profile-card">
+                    <div class="card-glow"></div>
+                    <div class="profile-image">
+                        <div class="image-placeholder">
+                            <div class="ky-logo-large">
+                                <span class="logo-k-large">K</span>
+                                <span class="logo-y-large">Y</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <h3>Karim Youssef</h3>
+                        <p>Alberta, Canada</p>
+                        <div class="social-links">
+                            <a href="https://github.com/k9Doge3" target="_blank" rel="noopener" class="social-link">
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://linkedin.com/in/karimyoussef" target="_blank" rel="noopener" class="social-link">
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-text">Scroll to explore</div>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate about creating digital solutions</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I'm a full-stack developer and entrepreneur based in Alberta, Canada. My journey spans from hands-on painting work with Wildrose Painters to crafting sophisticated web applications.</p>
+                    <p>I believe in the power of clean code, beautiful design, and meaningful user experiences. Every project is an opportunity to create something extraordinary.</p>
+                </div>
+                <div class="skills-showcase">
+                    <div class="skill-category">
+                        <h4>Frontend</h4>
+                        <div class="skills">
+                            <span class="skill">React</span>
+                            <span class="skill">Next.js</span>
+                            <span class="skill">TypeScript</span>
+                            <span class="skill">Tailwind CSS</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Backend</h4>
+                        <div class="skills">
+                            <span class="skill">Node.js</span>
+                            <span class="skill">Express</span>
+                            <span class="skill">PostgreSQL</span>
+                            <span class="skill">Supabase</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Section -->
+    <section class="business-section" id="business">
+        <div class="container">
+            <div class="business-card">
+                <div class="business-visual">
+                    <div class="paint-animation">
+                        <div class="brush-stroke"></div>
+                        <div class="paint-drop"></div>
+                    </div>
+                    <h3>Wildrose Painters</h3>
+                    <p>Professional painting services across Alberta</p>
+                </div>
+                <div class="business-content">
+                    <h4>Transforming Spaces</h4>
+                    <p>From residential homes to commercial properties, we deliver exceptional painting services with attention to detail and customer satisfaction.</p>
+                    <div class="business-features">
+                        <div class="feature">🏠 Residential</div>
+                        <div class="feature">🏢 Commercial</div>
+                        <div class="feature">🎨 Interior & Exterior</div>
+                        <div class="feature">⭐ Quality Guaranteed</div>
+                    </div>
+                    <button class="business-btn" onclick="visitWildrose()">
+                        Visit Wildrose Painters
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Work</h2>
+                <p class="section-subtitle">Projects and achievements</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" onclick="viewPortfolio()">
+                    <div class="item-content">
+                        <div class="item-icon">💼</div>
+                        <h4>Development Portfolio</h4>
+                        <p>Full-stack applications and web solutions</p>
+                        <span class="view-more">View Projects →</span>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="viewResume()">
+                    <div class="item-content">
+                        <div class="item-icon">📄</div>
+                        <h4>Professional Resume</h4>
+                        <p>Experience, skills, and achievements</p>
+                        <span class="view-more">View Resume →</span>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="viewPersonal()">
+                    <div class="item-content">
+                        <div class="item-icon">🌟</div>
+                        <h4>Personal Projects</h4>
+                        <p>Creative endeavors and experiments</p>
+                        <span class="view-more">Explore →</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-text">
+                    <h2>Let's Create Something Amazing</h2>
+                    <p>Ready to bring your ideas to life? Let's collaborate and build something extraordinary together.</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">�</span>
+                            <span>karim@kygroup.ca</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>Alberta, Canada</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form onsubmit="handleContact(event)">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="4" required></textarea>
+                        <button type="submit" class="submit-btn">
+                            Send Message
+                            <div class="btn-glow"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="ky-logo">
+                        <span class="logo-k">K</span>
+                        <span class="logo-y">Y</span>
+                    </div>
+                    <span class="brand-text">KYGROUP.CA</span>
+                </div>
+                <p>&copy; 2025 Karim Youssef. Crafted with passion and precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
