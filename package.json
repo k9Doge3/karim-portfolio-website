@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@google-analytics/data": "^5.2.0",
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-accordion": "latest",
     "@radix-ui/react-alert-dialog": "latest",
@@ -70,7 +71,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.9",
-    "@types/node": "^22",
+    "@types/node": "^22.18.8",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "postcss": "^8.5",

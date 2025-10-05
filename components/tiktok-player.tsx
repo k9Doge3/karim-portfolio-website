@@ -96,14 +96,58 @@ export function TikTokPlayer({ className }: TikTokPlayerProps) {
   const fetchTikTokData = async () => {
     try {
       setError(null)
-      // For now, use mock data
-      // TODO: Replace with actual API call to /api/tiktok/profile
-      setTimeout(() => {
-        setTikTokData(mockData)
-        setIsLoading(false)
-      }, 1000)
+      setIsLoading(true)
+      
+      // Fetch TikTok profile data from our API
+      const response = await fetch('/api/tiktok/profile')
+      
+      if (!response.ok) {
+        throw new Error('Failed to fetch TikTok data')
+      }
+      
+      const data = await response.json()
+      
+      if (data.status === 'success') {
+        // Transform API response to component format
+        const transformedData: TikTokActivity = {
+          profile: {
+            username: 'kylife_demo',
+            display_name: data.profile.display_name,
+            follower_count: data.profile.follower_count,
+            following_count: data.profile.following_count,
+            likes_count: data.profile.likes_count,
+            video_count: data.videos.length,
+            avatar_url: data.profile.avatar_url,
+            bio: 'Creative content creator & developer',
+            verified: false
+          },
+          recent_videos: data.videos.map((video: any) => ({
+            id: video.id,
+            title: video.title,
+            view_count: video.view_count,
+            like_count: video.like_count,
+            comment_count: Math.floor(video.like_count * 0.1), // Estimate
+            share_count: video.share_count,
+            create_time: new Date(video.create_time).toISOString(),
+            cover_image_url: video.cover_image_url,
+            web_video_url: `https://tiktok.com/@kylife_demo/video/${video.id}`,
+            duration: 30 // Default duration
+          })),
+          latest_video: undefined
+        }
+        
+        transformedData.latest_video = transformedData.recent_videos[0]
+        setTikTokData(transformedData)
+      } else {
+        throw new Error(data.error || 'Failed to load TikTok data')
+      }
     } catch (err) {
+      console.error('TikTok API Error:', err)
       setError(err instanceof Error ? err.message : 'Failed to load TikTok data')
+      
+      // Fallback to mock data if API fails
+      setTikTokData(mockData)
+    } finally {
       setIsLoading(false)
     }
   }
