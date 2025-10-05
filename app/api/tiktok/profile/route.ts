@@ -6,40 +6,53 @@ export async function GET(request: NextRequest) {
     // In production, this would use the stored access token to fetch real data
     const mockData = {
       profile: {
-        open_id: "demo_user_123",
-        display_name: "KY Life Demo",
-        avatar_url: "https://example.com/avatar.jpg",
-        follower_count: 1250,
-        following_count: 890,
-        likes_count: 15600
+        open_id: "karim_life_123",
+        username: "@karim.life",
+        display_name: "Karim | KY Life",
+        avatar_url: "/profile-picture.jpg",
+        follower_count: 2840,
+        following_count: 456,
+        likes_count: 18500,
+        video_count: 47,
+        bio: "CPA Candidate 📊 | Entrepreneur 🚀 | Tech & Business Content",
+        verified: false
       },
       videos: [
         {
-          id: "video_1",
-          title: "Latest Creative Project",
-          view_count: 5420,
-          like_count: 234,
-          share_count: 12,
-          create_time: Date.now() - (24 * 60 * 60 * 1000), // 1 day ago
-          cover_image_url: "https://example.com/cover1.jpg"
+          id: "7298765432101234567",
+          title: "Day in the Life: CPA Exam Prep 📚",
+          view_count: 15600,
+          like_count: 892,
+          comment_count: 156,
+          share_count: 43,
+          create_time: Date.now() - (2 * 24 * 60 * 60 * 1000), // 2 days ago
+          cover_image_url: "/placeholder.jpg",
+          web_video_url: "https://tiktok.com/@karim.life/video/1",
+          duration: 45
         },
         {
-          id: "video_2", 
-          title: "Behind the Scenes",
-          view_count: 3210,
-          like_count: 156,
-          share_count: 8,
-          create_time: Date.now() - (3 * 24 * 60 * 60 * 1000), // 3 days ago
-          cover_image_url: "https://example.com/cover2.jpg"
+          id: "7298765432101234568", 
+          title: "Business Tips for Young Entrepreneurs 💼",
+          view_count: 23400,
+          like_count: 1340,
+          comment_count: 287,
+          share_count: 89,
+          create_time: Date.now() - (4 * 24 * 60 * 60 * 1000), // 4 days ago
+          cover_image_url: "/placeholder.jpg",
+          web_video_url: "https://tiktok.com/@karim.life/video/2",
+          duration: 38
         },
         {
-          id: "video_3",
-          title: "Quick Tutorial",
-          view_count: 8950,
-          like_count: 445,
+          id: "7298765432101234569",
+          title: "Tech Stack for My Portfolio Website 💻",
+          view_count: 8900,
+          like_count: 567,
+          comment_count: 89,
           share_count: 23,
           create_time: Date.now() - (7 * 24 * 60 * 60 * 1000), // 1 week ago
-          cover_image_url: "https://example.com/cover3.jpg"
+          cover_image_url: "/placeholder.jpg",
+          web_video_url: "https://tiktok.com/@karim.life/video/3",
+          duration: 52
         }
       ],
       last_updated: new Date().toISOString(),

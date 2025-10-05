@@ -48,40 +48,52 @@ export function TikTokPlayer({ className }: TikTokPlayerProps) {
   // Mock data for demo - replace with actual TikTok API integration
   const mockData: TikTokActivity = {
     profile: {
-      username: "yourhandle",
-      display_name: "Your Name",
-      follower_count: 12500,
-      following_count: 890,
-      likes_count: 156000,
-      video_count: 45,
-      avatar_url: "/placeholder-user.jpg",
-      bio: "Creating content & sharing life ✨",
+      username: "@karim.life",
+      display_name: "Karim | KY Life",
+      follower_count: 2840,
+      following_count: 456,
+      likes_count: 18500,
+      video_count: 47,
+      avatar_url: "/profile-picture.jpg",
+      bio: "CPA Candidate 📊 | Entrepreneur 🚀 | Tech & Business Content",
       verified: false
     },
     recent_videos: [
       {
-        id: "1",
-        title: "Day in my life as a developer 💻",
-        view_count: 25400,
-        like_count: 2100,
+        id: "7298765432101234567",
+        title: "Day in the Life: CPA Exam Prep �",
+        view_count: 15600,
+        like_count: 892,
         comment_count: 156,
-        share_count: 89,
-        create_time: "2024-10-03T18:30:00Z",
+        share_count: 43,
+        create_time: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
         cover_image_url: "/placeholder.jpg",
-        web_video_url: "https://tiktok.com/@user/video/123",
-        duration: 60
+        web_video_url: "https://tiktok.com/@karim.life/video/1",
+        duration: 45
       },
       {
-        id: "2", 
-        title: "Quick coding tips that changed everything",
-        view_count: 18200,
-        like_count: 1800,
-        comment_count: 245,
-        share_count: 156,
-        create_time: "2024-10-01T14:20:00Z",
+        id: "7298765432101234568", 
+        title: "Business Tips for Young Entrepreneurs 💼",
+        view_count: 23400,
+        like_count: 1340,
+        comment_count: 287,
+        share_count: 89,
+        create_time: new Date(Date.now() - 4 * 24 * 60 * 60 * 1000).toISOString(),
         cover_image_url: "/placeholder.jpg", 
-        web_video_url: "https://tiktok.com/@user/video/124",
-        duration: 45
+        web_video_url: "https://tiktok.com/@karim.life/video/2",
+        duration: 38
+      },
+      {
+        id: "7298765432101234569",
+        title: "Tech Stack for My Portfolio Website 💻",
+        view_count: 8900,
+        like_count: 567,
+        comment_count: 89,
+        share_count: 23,
+        create_time: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString(),
+        cover_image_url: "/placeholder.jpg",
+        web_video_url: "https://tiktok.com/@karim.life/video/3",
+        duration: 52
       }
     ]
   }
