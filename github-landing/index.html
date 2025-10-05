@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karim Youssef | Creative Digital Universe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+     Animated Starfield Background 
+    <canvas id="starfield"></canvas>
+    
+     Navigation 
+    <nav class="main-nav">
+        <div class="nav-content">
+            <div class="logo-container">
+                <div class="ky-logo">
+                    <span class="logo-k">K</span><span class="logo-y">Y</span>
+                </div>
+                <span class="brand-text">KARIM YOUSSEF</span>
+            </div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#business" class="nav-link">Business</a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+     Hero Section 
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="greeting">Hello, I'm</p>
+                <h1 class="hero-name">
+                    <span class="name-karim">Karim</span>
+                    <span class="name-youssef">Youssef</span>
+                </h1>
+                <div class="hero-tagline">
+                    <span>Creative Developer</span>
+                    <span class="separator">•</span>
+                    <span>Business Owner</span>
+                    <span class="separator">•</span>
+                    <span>Digital Innovator</span>
+                </div>
+                <p class="hero-description">
+                    Crafting digital experiences that bridge creativity and technology.
+                    From painting walls to building web applications, I bring visions to life.
+                </p>
+                <div class="hero-actions">
+                    <button class="cta-primary" onclick="scrollToSection('work')">
+                        <span class="btn-glow"></span>
+                        <span class="btn-text">Explore My Work</span>
+                    </button>
+                    <button class="cta-secondary" onclick="scrollToSection('contact')">
+                        Get In Touch
+                    </button>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="profile-card">
+                    <div class="ky-badge">KY</div>
+                    <h3 class="card-name">Karim Youssef</h3>
+                    <p class="card-location">Alberta, Canada</p>
+                    <div class="card-links">
+                        <a href="https://github.com/k9Doge3" target="_blank" class="social-link">GitHub</a>
+                        <a href="https://linkedin.com/in/karimyoussef" target="_blank" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </section>
+
+     About Section 
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate about creating digital solutions</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        I'm a full-stack developer and entrepreneur based in Alberta, Canada. 
+                        My journey spans from hands-on painting work with Wildrose Painters to 
+                        crafting sophisticated web applications.
+                    </p>
+                    <p class="about-description">
+                        I believe in the power of clean code, beautiful design, and meaningful 
+                        user experiences. Every project is an opportunity to create something extraordinary.
+                    </p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4 class="skill-title">Frontend</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Next.js</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4 class="skill-title">Backend</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">Supabase</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Business Section 
+    <section id="business" class="business-section">
+        <div class="container">
+            <div class="business-card">
+                <div class="business-content">
+                    <h3 class="business-title">Wildrose Painters</h3>
+                    <p class="business-subtitle">Professional painting services across Alberta</p>
+                    <h4 class="business-heading">Transforming Spaces</h4>
+                    <p class="business-description">
+                        From residential homes to commercial properties, we deliver exceptional 
+                        painting services with attention to detail and customer satisfaction.
+                    </p>
+                    <div class="business-features">
+                        <div class="feature-item">🏠 Residential</div>
+                        <div class="feature-item">🏢 Commercial</div>
+                        <div class="feature-item">🎨 Interior & Exterior</div>
+                        <div class="feature-item">⭐ Quality Guaranteed</div>
+                    </div>
+                    <a href="https://wildrosepainters.ca" target="_blank" class="business-cta">
+                        Visit Wildrose Painters →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Work Section 
+    <section id="work" class="work-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Work</h2>
+                <p class="section-subtitle">Projects and achievements</p>
+            </div>
+            <div class="work-grid">
+                <div class="work-card">
+                    <div class="work-icon">💼</div>
+                    <h4 class="work-title">Development Portfolio</h4>
+                    <p class="work-description">Full-stack applications and web solutions</p>
+                    <a href="https://github.com/k9Doge3" target="_blank" class="work-link">View Projects →</a>
+                </div>
+                <div class="work-card">
+                    <div class="work-icon">📄</div>
+                    <h4 class="work-title">Professional Resume</h4>
+                    <p class="work-description">Experience, skills, and achievements</p>
+                    <a href="#contact" class="work-link">View Resume →</a>
+                </div>
+                <div class="work-card">
+                    <div class="work-icon">🌟</div>
+                    <h4 class="work-title">Personal Projects</h4>
+                    <p class="work-description">Creative endeavors and experiments</p>
+                    <a href="https://github.com/k9Doge3" target="_blank" class="work-link">Explore →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Contact Section 
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Create Something Amazing</h2>
+                <p class="section-subtitle">Ready to bring your ideas to life? Let's collaborate and build something extraordinary together.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <span class="contact-text">karim@kygroup.ca</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span class="contact-text">Alberta, Canada</span>
+                    </div>
+                </div>
+                <form class="contact-form" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required class="form-input"></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">
+                        <span class="btn-glow"></span>
+                        <span class="btn-text">Send Message</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+     Footer 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="ky-logo">
+                        <span class="logo-k">K</span><span class="logo-y">Y</span>
+                    </div>
+                    <span class="brand-text">KARIM YOUSSEF</span>
+                </div>
+                <p class="footer-text">© 2025 Karim Youssef. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

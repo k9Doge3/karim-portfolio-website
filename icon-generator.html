@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Icon Generator</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #000;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .icon-preview {
+            border: 2px solid #333;
+            border-radius: 12px;
+        }
+        .controls {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+        .download-link {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>KY Portfolio App Icon Generator</h1>
+    
+    <canvas id="iconCanvas" width="1024" height="1024" class="icon-preview"></canvas>
+    
+    <div class="controls">
+        <button onclick="generateIcon('gradient')">Gradient Icon</button>
+        <button onclick="generateIcon('minimal')">Minimal Icon</button>
+        <button onclick="generateIcon('tech')">Tech Icon</button>
+        <button onclick="downloadIcon()">Download PNG</button>
+    </div>
+    
+    <a id="downloadLink" class="download-link" download="ky-portfolio-icon.png"></a>
+
+    <script>
+        const canvas = document.getElementById('iconCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        function generateIcon(style) {
+            // Clear canvas
+            ctx.clearRect(0, 0, 1024, 1024);
+            
+            if (style === 'gradient') {
+                // Gradient background
+                const gradient = ctx.createLinearGradient(0, 0, 1024, 1024);
+                gradient.addColorStop(0, '#667eea');
+                gradient.addColorStop(0.5, '#764ba2');
+                gradient.addColorStop(1, '#f093fb');
+                
+                // Rounded rectangle background
+                roundedRect(ctx, 0, 0, 1024, 1024, 120);
+                ctx.fillStyle = gradient;
+                ctx.fill();
+                
+                // Glass effect overlay
+                const glassGradient = ctx.createLinearGradient(0, 0, 1024, 512);
+                glassGradient.addColorStop(0, 'rgba(255, 255, 255, 0.3)');
+                glassGradient.addColorStop(1, 'rgba(255, 255, 255, 0.1)');
+                
+                roundedRect(ctx, 0, 0, 1024, 1024, 120);
+                ctx.fillStyle = glassGradient;
+                ctx.fill();
+                
+                // KY Text
+                ctx.fillStyle = 'white';
+                ctx.font = 'bold 400px Inter, sans-serif';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText('KY', 512, 512);
+                
+            } else if (style === 'minimal') {
+                // Dark background
+                roundedRect(ctx, 0, 0, 1024, 1024, 120);
+                ctx.fillStyle = '#1a1a1a';
+                ctx.fill();
+                
+                // Border
+                roundedRect(ctx, 0, 0, 1024, 1024, 120);
+                ctx.strokeStyle = '#333';
+                ctx.lineWidth = 8;
+                ctx.stroke();
+                
+                // KY Text with gradient
+                const textGradient = ctx.createLinearGradient(200, 200, 824, 824);
+                textGradient.addColorStop(0, '#667eea');
+                textGradient.addColorStop(1, '#764ba2');
+                
+                ctx.fillStyle = textGradient;
+                ctx.font = 'bold 380px Inter, sans-serif';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText('KY', 512, 512);
+                
+            } else if (style === 'tech') {
+                // Tech-inspired background
+                roundedRect(ctx, 0, 0, 1024, 1024, 120);
+                ctx.fillStyle = '#0f0f0f';
+                ctx.fill();
+                
+                // Circuit pattern
+                ctx.strokeStyle = '#333';
+                ctx.lineWidth = 2;
+                for (let i = 0; i < 20; i++) {
+                    for (let j = 0; j < 20; j++) {
+                        const x = i * 51.2;
+                        const y = j * 51.2;
+                        if (Math.random() > 0.7) {
+                            ctx.beginPath();
+                            ctx.moveTo(x, y);
+                            ctx.lineTo(x + 51.2, y);
+                            ctx.moveTo(x, y);
+                            ctx.lineTo(x, y + 51.2);
+                            ctx.stroke();
+                        }
+                    }
+                }
+                
+                // Central circle
+                const centerGradient = ctx.createRadialGradient(512, 512, 0, 512, 512, 300);
+                centerGradient.addColorStop(0, '#667eea');
+                centerGradient.addColorStop(1, 'rgba(102, 126, 234, 0.1)');
+                
+                ctx.beginPath();
+                ctx.arc(512, 512, 280, 0, Math.PI * 2);
+                ctx.fillStyle = centerGradient;
+                ctx.fill();
+                
+                // KY Text
+                ctx.fillStyle = 'white';
+                ctx.font = 'bold 320px Inter, sans-serif';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText('KY', 512, 512);
+            }
+        }
+        
+        function roundedRect(ctx, x, y, width, height, radius) {
+            ctx.beginPath();
+            ctx.moveTo(x + radius, y);
+            ctx.arcTo(x + width, y, x + width, y + height, radius);
+            ctx.arcTo(x + width, y + height, x, y + height, radius);
+            ctx.arcTo(x, y + height, x, y, radius);
+            ctx.arcTo(x, y, x + width, y, radius);
+            ctx.closePath();
+        }
+        
+        function downloadIcon() {
+            const link = document.getElementById('downloadLink');
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+        
+        // Generate default icon
+        generateIcon('gradient');
+    </script>
+</body>
+</html>
