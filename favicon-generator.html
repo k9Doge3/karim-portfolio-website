@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KY Group Favicon Generator</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #000;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .preview-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .favicon-preview {
+            border: 2px solid #333;
+            border-radius: 8px;
+            background: #111;
+            padding: 10px;
+            text-align: center;
+        }
+        .favicon-canvas {
+            border: 1px solid #444;
+        }
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+        .download-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .download-link {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>KY Group Favicon Generator</h1>
+    
+    <div class="preview-container">
+        <div class="favicon-preview">
+            <h3>16x16 (Browser Tab)</h3>
+            <canvas id="favicon16" width="16" height="16" class="favicon-canvas"></canvas>
+        </div>
+        <div class="favicon-preview">
+            <h3>32x32 (Bookmarks)</h3>
+            <canvas id="favicon32" width="32" height="32" class="favicon-canvas"></canvas>
+        </div>
+        <div class="favicon-preview">
+            <h3>180x180 (Apple Touch)</h3>
+            <canvas id="favicon180" width="180" height="180" class="favicon-canvas"></canvas>
+        </div>
+        <div class="favicon-preview">
+            <h3>192x192 (Android)</h3>
+            <canvas id="favicon192" width="192" height="192" class="favicon-canvas"></canvas>
+        </div>
+    </div>
+    
+    <button onclick="generateFavicons()">Generate All Favicons</button>
+    
+    <div class="download-links">
+        <button onclick="downloadFavicon('favicon16', 'favicon-16x16.png')">Download 16x16</button>
+        <button onclick="downloadFavicon('favicon32', 'favicon-32x32.png')">Download 32x32</button>
+        <button onclick="downloadFavicon('favicon180', 'apple-touch-icon.png')">Download Apple Touch</button>
+        <button onclick="downloadFavicon('favicon192', 'android-chrome-192x192.png')">Download Android</button>
+    </div>
+    
+    <a id="downloadLink" class="download-link"></a>
+
+    <script>
+        function drawKYLogo(ctx, size) {
+            // Clear canvas
+            ctx.clearRect(0, 0, size, size);
+            
+            // Background circle with gradient
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, '#667eea');
+            gradient.addColorStop(0.5, '#764ba2');
+            gradient.addColorStop(1, '#f093fb');
+            
+            ctx.beginPath();
+            ctx.arc(size/2, size/2, size/2 - 1, 0, Math.PI * 2);
+            ctx.fillStyle = gradient;
+            ctx.fill();
+            
+            // Inner darker circle for better contrast
+            ctx.beginPath();
+            ctx.arc(size/2, size/2, size/2 - 2, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.3)';
+            ctx.fill();
+            
+            // KY Text
+            ctx.fillStyle = 'white';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            
+            // Adjust font size based on canvas size
+            let fontSize;
+            if (size <= 16) fontSize = 10;
+            else if (size <= 32) fontSize = 18;
+            else if (size <= 64) fontSize = 36;
+            else fontSize = Math.floor(size * 0.4);
+            
+            ctx.font = `bold ${fontSize}px Arial, sans-serif`;
+            ctx.fillText('KY', size/2, size/2);
+        }
+        
+        function generateFavicons() {
+            const sizes = [
+                { id: 'favicon16', size: 16 },
+                { id: 'favicon32', size: 32 },
+                { id: 'favicon180', size: 180 },
+                { id: 'favicon192', size: 192 }
+            ];
+            
+            sizes.forEach(({ id, size }) => {
+                const canvas = document.getElementById(id);
+                const ctx = canvas.getContext('2d');
+                drawKYLogo(ctx, size);
+            });
+            
+            // Show download buttons
+            document.querySelector('.download-links').style.display = 'flex';
+        }
+        
+        function downloadFavicon(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.getElementById('downloadLink');
+            link.href = canvas.toDataURL('image/png');
+            link.download = filename;
+            link.click();
+        }
+        
+        // Generate default favicons on load
+        generateFavicons();
+    </script>
+</body>
+</html>
