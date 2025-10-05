@@ -26,12 +26,12 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Karim Youssef - Professional Portfolio",
+    default: "Karim Youssef - CPA Candidate & Technology Entrepreneur | KY Group",
     template: "%s | Karim Youssef",
   },
-  description: "Professional portfolio of Karim Youssef, CPA Candidate and BComm Accounting graduate specializing in financial reporting, business operations, and modern technology solutions.",
-  keywords: ["Karim Youssef", "CPA", "Accounting", "Finance", "Portfolio", "Professional", "Business", "KY Group"],
-  authors: [{ name: "Karim Youssef" }],
+  description: "Professional portfolio of Karim Youssef, CPA candidate and technology entrepreneur. Founder of KY Group and co-owner of Wildrose Painters. Expertise in accounting, financial reporting, business management, and digital innovation.",
+  keywords: ["Karim Youssef", "CPA Candidate", "Accountant", "Entrepreneur", "KY Group", "Wildrose Painters", "Financial Reporting", "Business Consulting", "Technology", "Web Development"],
+  authors: [{ name: "Karim Youssef", url: "https://kygroup.ca" }],
   creator: "Karim Youssef",
   publisher: "KY Group",
   formatDetection: {
@@ -43,45 +43,44 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  icons: {
-    icon: [
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-    ],
-    apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-    ],
-    other: [
-      {
-        rel: "android-chrome-192x192",
-        url: "/android-chrome-192x192.png",
-        sizes: "192x192",
-        type: "image/png",
-      },
-    ],
-  },
   openGraph: {
     type: "website",
-    locale: "en_US",
-    url: "/",
-    title: "Karim Youssef - Professional Portfolio",
-    description: "Professional portfolio of Karim Youssef, CPA Candidate and BComm Accounting graduate.",
-    siteName: "Karim's Portfolio",
+    locale: "en_CA",
+    url: "https://kygroup.ca",
+    title: "Karim Youssef - CPA Candidate & Technology Entrepreneur",
+    description: "Professional portfolio showcasing expertise in accounting, business management, and technology innovation.",
+    siteName: "KY Group",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/kygroup-logo.png",
         width: 1200,
         height: 630,
-        alt: "Karim's Portfolio",
+        alt: "KY Group - Karim Youssef Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Karim's Portfolio - Business Domains",
-    description: "Simple portfolio showcasing Karim's business domains and professional links.",
-    creator: "@karim",
-    images: ["/og-image.jpg"],
+    title: "Karim Youssef - CPA Candidate & Technology Entrepreneur",
+    description: "Professional portfolio showcasing expertise in accounting, business management, and technology innovation.",
+    images: ["/kygroup-logo.png"],
+  },
+  icons: {
+    icon: [
+      { url: "/kygroup-logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/kygroup-logo.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [
+      { url: "/kygroup-logo.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      {
+        rel: "android-chrome-192x192",
+        url: "/kygroup-logo.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+    ],
   },
   robots: {
     index: true,
@@ -97,7 +96,7 @@ export const metadata: Metadata = {
   verification: {
     google: "your-google-verification-code",
   },
-  generator: "v0.app",
+  generator: "KY Group Portfolio",
 }
 
 export const viewport: Viewport = {

@@ -37,40 +37,40 @@ export default function HomePageClient() {
 
   const portfolioProjects = [
     {
-      title: "Financial Analytics Dashboard",
-      description: "Professional financial reporting and data analytics solution built with Power BI and advanced Excel modeling",
-      tech: ["Power BI", "Excel", "Financial Modeling", "Data Visualization"],
-      github: "#",
-      demo: "#",
-      category: "Accounting & Finance",
-      gradient: "from-blue-500/20 to-cyan-500/20",
-      icon: TrendingUp,
-    },
-    {
-      title: "KY Group Portfolio",
-      description: "Modern portfolio website showcasing professional services with responsive design and interactive elements",
-      tech: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
-      github: "https://github.com/karim-youssef",
+      title: "KY Group Portfolio Website",
+      description: "Modern professional portfolio with real-time API integrations, business monitoring, and responsive design showcasing comprehensive digital presence",
+      tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "Google Analytics", "TikTok API"],
+      github: "https://github.com/karimyoussef91/portfolio",
       demo: "https://kygroup.ca",
       category: "Web Development",
-      logo: "/kygroup-logo.png",
-      gradient: "from-purple-500/20 to-pink-500/20",
+      gradient: "from-blue-500/20 to-cyan-500/20",
       icon: Code,
+    },
+    {
+      title: "Wildrose Painters Business Suite",
+      description: "Comprehensive business management platform with client tracking, project management, financial reporting, and real-time analytics for painting contracting services",
+      tech: ["Business Analytics", "Client Management", "Financial Reporting", "Project Tracking"],
+      github: "#",
+      demo: "https://wildrosepainters.ca",
+      category: "Business Management",
+      logo: "/wildrose-painters-logo.png",
+      gradient: "from-green-500/20 to-emerald-500/20",
+      icon: TrendingUp,
     },
   ]
 
   const socialLinks = [
     {
       name: "GitHub",
-      url: "https://github.com/kyriakos-paul",
+      url: "https://github.com/karimyoussef91",
       icon: Github,
       color: "hover:text-gray-400",
       bgColor: "bg-gray-900/50 hover:bg-gray-800/70",
       shadowColor: "shadow-gray-500/50",
     },
     {
-      name: "LinkedIn",
-      url: "https://linkedin.com/in/karim-youssef",
+      name: "LinkedIn", 
+      url: "https://linkedin.com/in/karim-youssef-accounting",
       icon: Linkedin,
       color: "hover:text-blue-400",
       bgColor: "bg-blue-900/50 hover:bg-blue-800/70",
@@ -78,39 +78,15 @@ export default function HomePageClient() {
     },
     {
       name: "Instagram",
-      url: "https://instagram.com/karimyoussef",
+      url: "https://instagram.com/ky.group.official", 
       icon: Instagram,
       color: "hover:text-pink-400",
       bgColor: "bg-pink-900/50 hover:bg-pink-800/70",
       shadowColor: "shadow-pink-500/50",
     },
     {
-      name: "Twitter",
-      url: "https://twitter.com/karimyoussef",
-      icon: Twitter,
-      color: "hover:text-sky-400",
-      bgColor: "bg-sky-900/50 hover:bg-sky-800/70",
-      shadowColor: "shadow-sky-500/50",
-    },
-    {
-      name: "Facebook",
-      url: "https://facebook.com/karimyoussef",
-      icon: Facebook,
-      color: "hover:text-blue-500",
-      bgColor: "bg-blue-900/50 hover:bg-blue-800/70",
-      shadowColor: "shadow-blue-500/50",
-    },
-    {
-      name: "YouTube",
-      url: "https://youtube.com/@karimyoussef",
-      icon: Youtube,
-      color: "hover:text-red-500",
-      bgColor: "bg-red-900/50 hover:bg-red-800/70",
-      shadowColor: "shadow-red-500/50",
-    },
-    {
       name: "Email",
-      url: "mailto:kyoussef6994@gmail.com",
+      url: "mailto:karim@kygroup.ca",
       icon: Mail,
       color: "hover:text-green-400",
       bgColor: "bg-green-900/50 hover:bg-green-800/70",
@@ -159,9 +135,9 @@ export default function HomePageClient() {
                   <h1 className="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                     Karim Youssef
                   </h1>
-                  <p className="text-xl text-white/80 mb-6 font-medium">Chartered Professional Accountant Candidate</p>
+                  <p className="text-xl text-white/80 mb-6 font-medium">CPA Candidate & Technology Entrepreneur</p>
                   <p className="text-white/70 text-base mb-8 leading-relaxed max-w-2xl">
-                    BComm Accounting graduate with expertise in financial reporting, business operations, and modern technology solutions.
+                    Dedicated accounting professional and business owner with expertise in financial reporting, business operations, and innovative technology solutions. Founder of KY Group and co-owner of Wildrose Painters, combining traditional business acumen with modern digital strategies.
                   </p>
 
                   <div className="flex flex-wrap gap-3 justify-center md:justify-start">
