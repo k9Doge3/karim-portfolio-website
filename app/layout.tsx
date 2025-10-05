@@ -121,6 +121,11 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Favicon */}
+        <link rel="icon" href="/kygroup-logo.png" type="image/png" />
+        <link rel="shortcut icon" href="/kygroup-logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/kygroup-logo.png" />
 
         <script
           type="application/ld+json"
