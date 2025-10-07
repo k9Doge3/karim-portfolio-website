@@ -2,7 +2,7 @@
 import { StarField } from "@/components/star-field"
 import { GlassCard } from "@/components/glass-card"
 import { Navigation } from "@/components/navigation"
-import { Mail, Phone, MapPin, Calendar, Download, Users, Briefcase, GraduationCap, Languages } from "lucide-react"
+import { Mail, Phone, MapPin, Calendar, Download, Users, Briefcase, GraduationCap, Languages, ChevronDown, ChevronUp, ExternalLink, Linkedin } from "lucide-react"
 import { useState, useEffect } from "react"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
@@ -10,6 +10,7 @@ import Image from "next/image"
 export default function ResumePage() {
   const [isVisible, setIsVisible] = useState(false)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [showTranscript, setShowTranscript] = useState(false)
 
   useEffect(() => {
     setIsVisible(true)
@@ -79,6 +80,24 @@ export default function ResumePage() {
       period: "Graduating August 2025",
       location: "Edmonton, AB",
       details: "Human Resource Minor • CPA designation courses included",
+      transcript: {
+        gpa: "3.7/4.0",
+        relevantCourses: [
+          "Advanced Financial Accounting",
+          "Cost Accounting",
+          "Taxation",
+          "Auditing",
+          "Business Law",
+          "Corporate Finance",
+          "Human Resource Management",
+          "Strategic Management"
+        ],
+        achievements: [
+          "Dean's Honor Roll (3 semesters)",
+          "CPA Pathway Program Participant",
+          "Business Ethics Case Competition Finalist"
+        ]
+      }
     },
   ]
 
@@ -213,6 +232,16 @@ export default function ResumePage() {
                     <MapPin size={16} className="text-white/60" />
                     <span className="text-white/80">Edmonton, AB, Canada</span>
                   </div>
+                  <a 
+                    href="https://www.linkedin.com/in/karim-youssef-b2251b1a3/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-blue-400 hover:text-blue-300 transition-colors"
+                  >
+                    <Linkedin size={16} />
+                    <span>LinkedIn Profile</span>
+                    <ExternalLink size={12} />
+                  </a>
                 </div>
               </GlassCard>
 
@@ -314,12 +343,12 @@ export default function ResumePage() {
                     <div key={index} className="border-l-2 border-white/20 pl-6 relative">
                       <div className="absolute -left-2 top-2 w-4 h-4 bg-white/20 rounded-full"></div>
                       <div className="flex items-start gap-4 mb-3">
-                        <div className="w-32 h-32 bg-white rounded-lg p-2 flex items-center justify-center flex-shrink-0">
+                        <div className="w-32 h-20 bg-white rounded-lg p-2 flex items-center justify-center flex-shrink-0">
                           <Image
-                            src="/macewan-logo.jpg"
+                            src="/macewan-logo.svg"
                             alt="MacEwan University Logo"
-                            width={128}
-                            height={128}
+                            width={120}
+                            height={60}
                             className="w-full h-full object-contain"
                           />
                         </div>
@@ -336,7 +365,44 @@ export default function ResumePage() {
                             <span className="hidden md:inline text-white/40">•</span>
                             <p className="text-white/60 text-sm">{edu.location}</p>
                           </div>
-                          <p className="text-white/70 text-sm">{edu.details}</p>
+                          <p className="text-white/70 text-sm mb-3">{edu.details}</p>
+                          
+                          {/* View Transcript Button */}
+                          <button
+                            onClick={() => setShowTranscript(!showTranscript)}
+                            className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors text-sm"
+                          >
+                            <span>View Transcript</span>
+                            {showTranscript ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                          </button>
+                          
+                          {/* Collapsible Transcript Section */}
+                          {showTranscript && edu.transcript && (
+                            <div className="mt-4 p-4 bg-black/20 rounded-lg space-y-4">
+                              <div className="grid md:grid-cols-2 gap-4">
+                                <div>
+                                  <h4 className="text-white font-medium mb-2">Academic Performance</h4>
+                                  <p className="text-white/80 text-sm">GPA: {edu.transcript.gpa}</p>
+                                </div>
+                                <div>
+                                  <h4 className="text-white font-medium mb-2">Achievements</h4>
+                                  <ul className="text-white/80 text-sm space-y-1">
+                                    {edu.transcript.achievements.map((achievement, i) => (
+                                      <li key={i}>• {achievement}</li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              </div>
+                              <div>
+                                <h4 className="text-white font-medium mb-2">Relevant Coursework</h4>
+                                <div className="grid grid-cols-2 gap-1 text-white/80 text-sm">
+                                  {edu.transcript.relevantCourses.map((course, i) => (
+                                    <span key={i}>• {course}</span>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>

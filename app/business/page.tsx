@@ -39,13 +39,13 @@ export default function BusinessPage() {
             <GlassCard variant="accent" className="p-8">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="flex flex-col items-center md:items-start gap-6">
-                  <div className="w-24 h-24 rounded-lg overflow-hidden border-2 border-white/20">
+                  <div className="w-32 h-32 rounded-lg overflow-hidden border-2 border-white/20 bg-white/5 p-2">
                     <Image
                       src="/wildrose-painters-logo.png"
                       alt="Wildrose Painters logo"
-                      width={96}
-                      height={96}
-                      className="object-cover"
+                      width={128}
+                      height={128}
+                      className="object-contain w-full h-full"
                       priority
                     />
                   </div>
@@ -101,10 +101,16 @@ export default function BusinessPage() {
                     <p className="text-white/80 mb-4">
                       Professional painting services for residential and commercial properties in Alberta.
                     </p>
-                    <div className="inline-flex items-center gap-2 bg-yellow-600/20 text-yellow-200 px-4 py-2 rounded-lg">
+                    <a 
+                      href="https://wildrosepainters.ca" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 bg-yellow-600/20 hover:bg-yellow-600/30 text-yellow-200 hover:text-yellow-100 px-4 py-2 rounded-lg transition-all duration-200 group"
+                    >
                       <span>🚧</span>
-                      <span>Website launching soon - Contact via kygroup.ca</span>
-                    </div>
+                      <span>Website launching soon - Visit wildrosepainters.ca</span>
+                      <ExternalLink size={16} className="group-hover:scale-110 transition-transform" />
+                    </a>
                   </div>
                 </div>
               </div>

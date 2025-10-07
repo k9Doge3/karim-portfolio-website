@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200">
+  <!-- MacEwan University Logo Recreation -->
+  <defs>
+    <style>
+      .burgundy { fill: #8B1538; }
+      .black { fill: #000000; }
+      .yellow { fill: #FFD700; }
+    </style>
+  </defs>
+  
+  <!-- Building/Tower elements -->
+  <rect class="burgundy" x="23" y="20" width="8" height="80"/>
+  <rect class="burgundy" x="35" y="30" width="8" height="70"/>
+  <rect class="burgundy" x="47" y="25" width="8" height="75"/>
+  <rect class="burgundy" x="59" y="15" width="8" height="85"/>
+  <rect class="burgundy" x="71" y="35" width="8" height="65"/>
+  <rect class="burgundy" x="83" y="25" width="8" height="75"/>
+  <rect class="burgundy" x="95" y="20" width="8" height="80"/>
+  
+  <!-- Base line -->
+  <rect class="burgundy" x="23" y="100" width="80" height="4"/>
+  
+  <!-- MacEwan text -->
+  <text x="120" y="85" font-family="Arial, sans-serif" font-size="48" font-weight="bold" class="black">MacEwan</text>
+  
+  <!-- UNIVERSITY text -->
+  <text x="120" y="125" font-family="Arial, sans-serif" font-size="20" font-weight="normal" class="black">UNIVERSITY</text>
+  
+  <!-- Yellow accent on the I -->
+  <rect class="yellow" x="270" y="115" width="3" height="15"/>
+</svg>
