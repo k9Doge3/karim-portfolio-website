@@ -97,15 +97,15 @@ export default function BusinessPage() {
                     <li>• High-Quality Finish Coatings</li>
                   </ul>
                   
-                  <a
-                    href="https://wildrose-painters-glowingandflowingk9dog-6457-a8db353c.vercel.app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white px-6 py-3 rounded-xl font-bold transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] hover:scale-105 group"
-                  >
-                    <ExternalLink size={20} className="group-hover:rotate-12 transition-transform" />
-                    Visit Full Website
-                  </a>
+                  <div className="text-center">
+                    <p className="text-white/80 mb-4">
+                      Professional painting services for residential and commercial properties in Alberta.
+                    </p>
+                    <div className="inline-flex items-center gap-2 bg-yellow-600/20 text-yellow-200 px-4 py-2 rounded-lg">
+                      <span>🚧</span>
+                      <span>Website launching soon - Contact via kygroup.ca</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </GlassCard>
