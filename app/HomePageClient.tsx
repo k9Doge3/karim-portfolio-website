@@ -371,6 +371,181 @@ export default function HomePageClient() {
           </div>
         </section>
 
+        {/* Professional Services Booking Section */}
+        <section className="py-16 px-6 bg-gradient-to-b from-black/50 to-black/90">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                Book a Professional Consultation
+              </h2>
+              <p className="text-white/70 text-lg max-w-2xl mx-auto">
+                Ready to take your business to the next level? Get expert accounting, financial consulting, or web development services tailored to your needs.
+              </p>
+            </div>
+
+            <GlassCard variant="default" size="lg" className="max-w-3xl mx-auto">
+              <form className="space-y-6">
+                {/* Service Selection */}
+                <div>
+                  <label className="block text-white/90 text-sm font-semibold mb-3">
+                    Service Needed *
+                  </label>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {[
+                      { id: 'accounting', name: 'Accounting & Financial Reporting', icon: '📊' },
+                      { id: 'tax', name: 'Tax Preparation & Planning', icon: '📋' },
+                      { id: 'business', name: 'Business Consulting', icon: '💼' },
+                      { id: 'web', name: 'Web Development', icon: '💻' },
+                      { id: 'financial', name: 'Financial Analysis', icon: '📈' },
+                      { id: 'other', name: 'Other Services', icon: '🎯' }
+                    ].map((service) => (
+                      <label key={service.id} className="flex items-center p-3 rounded-lg border border-white/20 bg-white/5 hover:bg-white/10 transition-colors cursor-pointer">
+                        <input type="checkbox" className="mr-3 accent-blue-500" />
+                        <span className="mr-2">{service.icon}</span>
+                        <span className="text-white/90 text-sm">{service.name}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Contact Information */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-white/90 text-sm font-semibold mb-2">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all"
+                      placeholder="John Smith"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-white/90 text-sm font-semibold mb-2">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all"
+                      placeholder="john@company.com"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-white/90 text-sm font-semibold mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all"
+                      placeholder="(587) 123-4567"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-white/90 text-sm font-semibold mb-2">
+                      Company/Organization
+                    </label>
+                    <input
+                      type="text"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all"
+                      placeholder="Your Company Ltd."
+                    />
+                  </div>
+                </div>
+
+                {/* Project Details */}
+                <div>
+                  <label className="block text-white/90 text-sm font-semibold mb-2">
+                    Project Details *
+                  </label>
+                  <textarea
+                    rows={5}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all resize-none"
+                    placeholder="Please describe your project, timeline, budget range, and any specific requirements..."
+                    required
+                  ></textarea>
+                </div>
+
+                {/* Budget Range */}
+                <div>
+                  <label className="block text-white/90 text-sm font-semibold mb-2">
+                    Budget Range
+                  </label>
+                  <select 
+                    title="Budget Range"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all"
+                  >
+                    <option value="">Select budget range...</option>
+                    <option value="under-1k">Under $1,000</option>
+                    <option value="1k-5k">$1,000 - $5,000</option>
+                    <option value="5k-10k">$5,000 - $10,000</option>
+                    <option value="10k-25k">$10,000 - $25,000</option>
+                    <option value="25k-plus">$25,000+</option>
+                    <option value="discuss">Prefer to discuss</option>
+                  </select>
+                </div>
+
+                {/* Preferred Contact Method */}
+                <div>
+                  <label className="block text-white/90 text-sm font-semibold mb-3">
+                    Preferred Contact Method
+                  </label>
+                  <div className="flex flex-wrap gap-4">
+                    {['Email', 'Phone', 'Video Call', 'In-Person Meeting'].map((method) => (
+                      <label key={method} className="flex items-center">
+                        <input type="radio" name="contact_method" className="mr-2 accent-blue-500" />
+                        <span className="text-white/90 text-sm">{method}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Submit Button */}
+                <div className="pt-4">
+                  <button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+                  >
+                    Request Free Consultation
+                  </button>
+                  <p className="text-center text-white/60 text-sm mt-3">
+                    Response time: Within 24 hours • No commitment required
+                  </p>
+                </div>
+              </form>
+            </GlassCard>
+
+            {/* Contact Information */}
+            <div className="mt-12 text-center">
+              <h3 className="text-xl font-semibold text-white mb-4">
+                Prefer Direct Contact?
+              </h3>
+              <div className="flex flex-col md:flex-row justify-center items-center gap-6">
+                <a 
+                  href="mailto:karim@kygroup.ca"
+                  className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
+                >
+                  <Mail size={20} />
+                  <span>karim@kygroup.ca</span>
+                </a>
+                <a 
+                  href="https://linkedin.com/in/karim-youssef-accounting"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
+                >
+                  <Linkedin size={20} />
+                  <span>LinkedIn Profile</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Footer */}
         <footer className="py-12 px-6 border-t border-white/10 mt-12">
           <div className="max-w-6xl mx-auto text-center">
