@@ -37,22 +37,22 @@ export default function HomePageClient() {
 
   const portfolioProjects = [
     {
-      title: "KY Group Portfolio Website",
-      description: "Modern professional portfolio with real-time API integrations, business monitoring, and responsive design showcasing comprehensive digital presence",
+      title: "Personal Portfolio Website",
+      description: "Modern portfolio showcasing my skills, projects, and professional journey. Built with Next.js 14, featuring real-time API integrations with Steam, Spotify, and TikTok for live activity displays.",
       tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "Google Analytics", "TikTok API"],
-      github: "https://github.com/karimyoussef91/portfolio",
+      github: "https://github.com/k9Doge3/portfolio",
       demo: "https://kygroup.ca",
       category: "Web Development",
       gradient: "from-blue-500/20 to-cyan-500/20",
       icon: Code,
     },
     {
-      title: "Wildrose Painters Business Suite",
-      description: "Comprehensive business management platform with client tracking, project management, financial reporting, and real-time analytics for painting contracting services",
-      tech: ["Business Analytics", "Client Management", "Financial Reporting", "Project Tracking"],
+      title: "Wildrose Painters Website",
+      description: "Professional business website for painting contracting services in Alberta. Complete with service listings, project galleries, and client contact systems",
+      tech: ["Business Website", "Client Management", "Service Showcase", "Contact Systems"],
       github: "#",
       demo: "https://wildrosepainters.ca",
-      category: "Business Management",
+      category: "Business Website",
       logo: "/wildrose-painters-logo.png",
       gradient: "from-green-500/20 to-emerald-500/20",
       icon: TrendingUp,
@@ -62,7 +62,7 @@ export default function HomePageClient() {
   const socialLinks = [
     {
       name: "GitHub",
-      url: "https://github.com/karimyoussef91",
+      url: "https://github.com/k9Doge3",
       icon: Github,
       color: "hover:text-gray-400",
       bgColor: "bg-gray-900/50 hover:bg-gray-800/70",

@@ -74,14 +74,40 @@ export function SteamPlayer({ className }: SteamPlayerProps) {
   }
 
   useEffect(() => {
-    // Simulate loading
-    const timer = setTimeout(() => {
-      setSteamData(mockSteamData)
-      setIsLoading(false)
-    }, 1200)
-
-    return () => clearTimeout(timer)
+    fetchSteamData()
+    // Refresh every 5 minutes
+    const interval = setInterval(fetchSteamData, 300000)
+    return () => clearInterval(interval)
   }, [])
+
+  const fetchSteamData = async () => {
+    try {
+      setError(null)
+      setIsLoading(true)
+      
+      // Fetch real Steam data from our API
+      const response = await fetch('/api/steam/profile')
+      
+      if (!response.ok) {
+        throw new Error('Failed to fetch Steam data')
+      }
+      
+      const data = await response.json()
+      
+      if (data.status === 'success' || data.status === 'fallback') {
+        setSteamData(data)
+      } else {
+        throw new Error(data.error || 'Steam API error')
+      }
+    } catch (err) {
+      console.error('Steam data fetch error:', err)
+      setError(err instanceof Error ? err.message : 'Failed to load Steam data')
+      // Use mock data as final fallback
+      setSteamData(mockSteamData)
+    } finally {
+      setIsLoading(false)
+    }
+  }
 
   const formatPlaytime = (minutes: number) => {
     const hours = Math.floor(minutes / 60)

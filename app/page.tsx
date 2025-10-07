@@ -1,4 +1,4 @@
-import HomePageClient from "./HomePageClient"
+ import HomePageClient from "./HomePageClient"
 
 export const metadata = {
   title: "Karim Youssef - CPA Candidate & Technology Entrepreneur | KY Group",

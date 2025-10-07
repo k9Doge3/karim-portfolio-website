@@ -10,7 +10,40 @@
   "outputDirectory": ".next",
   "installCommand": "npm install",
   "devCommand": "next dev",
+  "redirects": [
+    {
+      "source": "/business/:path*",
+      "destination": "https://www.wildrosepainters.ca/:path*",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "kygroup.ca"
+        }
+      ]
+    }
+  ],
   "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/$1",
+      "has": [
+        {
+          "type": "host",
+          "value": "kylife.ca"
+        }
+      ]
+    },
+    {
+      "source": "/personal",
+      "destination": "/personal",
+      "has": [
+        {
+          "type": "host",
+          "value": "kylife.ca"
+        }
+      ]
+    },
     {
       "source": "/(.*)",
       "destination": "/$1"

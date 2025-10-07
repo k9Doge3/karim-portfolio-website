@@ -4,6 +4,11 @@ export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const code = searchParams.get('code');
   
+  // Get the current host to support both localhost and production
+  const host = request.headers.get('host');
+  const protocol = host?.includes('localhost') ? 'http' : 'https';
+  const redirectUri = `${protocol}://${host}/api/spotify/auth`;
+  
   if (!code) {
     // Step 1: Redirect to Spotify authorization
     const scopes = [
@@ -15,7 +20,7 @@ export async function GET(request: NextRequest) {
     const authUrl = new URL('https://accounts.spotify.com/authorize');
     authUrl.searchParams.append('client_id', process.env.SPOTIFY_CLIENT_ID!);
     authUrl.searchParams.append('response_type', 'code');
-    authUrl.searchParams.append('redirect_uri', `${process.env.NEXTAUTH_URL}/api/spotify/auth`);
+    authUrl.searchParams.append('redirect_uri', redirectUri);
     authUrl.searchParams.append('scope', scopes);
     
     return NextResponse.redirect(authUrl.toString());
@@ -32,7 +37,7 @@ export async function GET(request: NextRequest) {
       body: new URLSearchParams({
         grant_type: 'authorization_code',
         code: code,
-        redirect_uri: `${process.env.NEXTAUTH_URL}/api/spotify/auth`
+        redirect_uri: redirectUri
       })
     });
     
