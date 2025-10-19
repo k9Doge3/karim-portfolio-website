@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "development",
+    "json-schema://hints/v1/development"
+  ],
+  "hints": {
+    "meta-viewport": "off"
+  }
+}

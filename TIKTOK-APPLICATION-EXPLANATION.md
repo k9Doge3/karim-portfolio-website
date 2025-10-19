@@ -1,12 +1,4 @@
-# TikTok Application Explanation - Products and Scopes
-
-## 📝 **Complete Explanation for TikTok Application Form:**
-
-Copy and paste this into the "Explain how each product and scope works" field:
-
----
-
-**PORTFOLIO WEBSITE TIKTOK INTEGRATION EXPLANATION**
+# PORTFOLIO WEBSITE TIKTOK INTEGRATION EXPLANATION
 
 This is a personal portfolio website (kylife.ca) that showcases real-time social media activity for professional branding purposes. The TikTok integration displays the portfolio owner's content as part of a comprehensive "What I'm Currently Doing" section alongside Spotify and Steam activities.
 
@@ -14,6 +6,7 @@ This is a personal portfolio website (kylife.ca) that showcases real-time social
 The Display API is used to showcase the portfolio owner's TikTok presence in a professional context. The website displays public profile information and recent video content to give visitors insight into creative activities and social media engagement. This creates a dynamic, engaging portfolio that demonstrates active content creation and social media presence.
 
 **TECHNICAL IMPLEMENTATION:**
+
 - Website fetches profile data via API calls to display basic user information
 - Recent videos are displayed with engagement metrics (views, likes) to showcase content performance
 - All displayed content links back to the original TikTok profile and videos
@@ -23,12 +16,14 @@ The Display API is used to showcase the portfolio owner's TikTok presence in a p
 **SCOPES REQUESTED AND SPECIFIC USAGE:**
 
 **user.info.basic:** Used to display professional profile information including:
+
 - Display name shown in the "Social Activity" section of the portfolio
 - Follower count displayed as a metric of social media reach and engagement
 - Basic profile statistics that demonstrate online presence and audience
 - This information appears in a card format alongside other social media metrics
 
 **video.list:** Used to showcase recent creative content and engagement:
+
 - Recent video titles displayed to show current content themes and topics
 - View counts and engagement metrics (likes, shares) shown as portfolio performance indicators
 - Video thumbnails displayed in a grid format showing visual content style
@@ -36,6 +31,7 @@ The Display API is used to showcase the portfolio owner's TikTok presence in a p
 - All videos link directly to original TikTok content for full viewing experience
 
 **USER FLOW:**
+
 1. Visitors navigate to the portfolio's "Personal" section
 2. TikTok profile card displays automatically with current statistics
 3. Recent videos section shows latest content with engagement metrics
@@ -43,6 +39,7 @@ The Display API is used to showcase the portfolio owner's TikTok presence in a p
 5. No user authentication required - purely display functionality
 
 **DATA HANDLING:**
+
 - Only public, already-available information is accessed and displayed
 - No personal or private data is requested or stored
 - Information is displayed temporarily for portfolio viewing only
@@ -62,7 +59,8 @@ This integration enhances the portfolio by demonstrating active social media pre
 - ✅ **No data storage** - temporary display only
 - ✅ **No content creation** - purely viewing existing content
 
-## 🎯 **Character Count:** 
+## 🎯 **Character Count:**
+
 The explanation above is approximately 950 characters and fits within most application form limits while being comprehensive and clear.
 
 Copy the explanation between the `---` lines into your TikTok application form! 📋

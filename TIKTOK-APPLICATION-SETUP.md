@@ -45,6 +45,7 @@ The products you're seeing are NOT what you need for your portfolio. You're miss
 ## 📝 **Correct Application Setup:**
 
 ### **Products to Select:**
+
 ```
 ✅ Display API (or Basic Display API)
 ❌ Login Kit

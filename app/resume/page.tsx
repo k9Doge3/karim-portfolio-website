@@ -6,6 +6,7 @@ import { Mail, Phone, MapPin, Calendar, Download, Users, Briefcase, GraduationCa
 import { useState, useEffect } from "react"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
+import React from "react"
 
 export default function ResumePage() {
   const [isVisible, setIsVisible] = useState(false)
@@ -170,7 +171,7 @@ export default function ResumePage() {
         <StarField mousePosition={mousePosition} speed={0.7} hyperspaceMode={false} starCount={550} opacity={0.3} />
       </div>
 
-      <Navigation />
+      <Navigation />npm install react
 
       <main className="relative z-10 pt-24 pb-12">
         <div className="max-w-6xl mx-auto px-6">
