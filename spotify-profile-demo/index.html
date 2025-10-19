@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Spotify Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="src/script.ts" type="module"></script>
+  </head>
+  <body>
+  <h1>Display your Spotify profile data</h1>
+  <button id="login-btn" title="Login with your Spotify account">Login with Spotify</button>
+    <section id="profile">
+      <h2>Logged in as <span id="displayName"></span></h2>
+      <span id="avatar" title="User avatar image"></span>
+      <ul>
+        <li>Email: <a id="email" href="mailto:" title="User email">Email address</a></li>
+        <li>Spotify URI: <a id="uri" href="#" title="Spotify URI">Spotify URI</a></li>
+        <li>Spotify URI: <a id="uri" href="#" title="Spotify URI">View URI</a></li>
+        <li>Link: <a id="url" href="" title="Spotify Profile Link">Profile Link</a></li>
+        <li>Profile Image: <span id="imgUrl"></span></li>
+      </ul>
+    </section>
+  </body>
+
+  <script>
+    // Example: Remove server-side code and fix string literal
+    // If you want to fetch data, use only client-side code here.
+    // The following is a placeholder for client-side fetch logic.
+
+    // Example client-side fetch (replace with your actual logic)
+    /*
+    fetch('/api/spotify/profile')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch Spotify data');
+        }
+        return response.json();
+      })
+      .then(data => {
+        // Handle Spotify profile data
+      })
+      .catch(err => {
+        // Handle error
+      });
+    */
+  </script>
+
+<!-- Note- We're referring directly to the TypeScript file, 
+ and we're using the `type="module"` attribute. 
+ Vite will transpile our TypeScript to JavaScript 
+ so that it can run in the browser. -->
+</html>
