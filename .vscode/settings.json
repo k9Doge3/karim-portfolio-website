@@ -1,0 +1,18 @@
+{
+    "window.density.editorTabHeight": "compact",
+    "workbench.editor.autoLockGroups": {
+        "default": true,
+        "workbench.editorinputs.searchEditorInput": true,
+        "notebookOutputEditor": true,
+        "jupyter-notebook": true,
+        "repl": true,
+        "workbench.editors.gettingStartedInput": true,
+        "imagePreview.previewEditor": true,
+        "vscode.audioPreview": true,
+        "workbench.input.interactive": true,
+        "mainThreadWebview-markdown.preview": true
+    },
+    "workbench.editor.alwaysShowEditorActions": true,
+    "workbench.editor.closeOnFileDelete": true,
+    "workbench.editor.centeredLayoutFixedWidth": true
+}
